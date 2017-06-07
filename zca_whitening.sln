@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zca_whitening", "zca_whitening\zca_whitening.vcxproj", "{51A58FA6-9CF0-48C1-825E-896716DCA30B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51A58FA6-9CF0-48C1-825E-896716DCA30B}.Debug|x64.ActiveCfg = Debug|x64
+		{51A58FA6-9CF0-48C1-825E-896716DCA30B}.Debug|x64.Build.0 = Debug|x64
+		{51A58FA6-9CF0-48C1-825E-896716DCA30B}.Debug|x86.ActiveCfg = Debug|Win32
+		{51A58FA6-9CF0-48C1-825E-896716DCA30B}.Debug|x86.Build.0 = Debug|Win32
+		{51A58FA6-9CF0-48C1-825E-896716DCA30B}.Release|x64.ActiveCfg = Release|x64
+		{51A58FA6-9CF0-48C1-825E-896716DCA30B}.Release|x64.Build.0 = Release|x64
+		{51A58FA6-9CF0-48C1-825E-896716DCA30B}.Release|x86.ActiveCfg = Release|Win32
+		{51A58FA6-9CF0-48C1-825E-896716DCA30B}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
