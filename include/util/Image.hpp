@@ -186,13 +186,14 @@ inline Image* readImage(char *filename)
 }
 
 //PCA on Normalized Data
-inline double* image_whitening(Image* img, double eps = 0.0)
+template<class T>
+inline T* image_whitening(Image* img, double eps = 0.0)
 {
 	double av = 0.0;
 	const int sz = img->height*img->width;
-	double* data = ImageTo<double>(img);
+	T* data = ImageTo<T>(img);
 
-	double* ret =  pca_normalizedData(data, sz * 3, eps);
+	T* ret =  pca_normalizedData(data, sz * 3, eps);
 	delete[] data;
 
 	return ret;
@@ -837,7 +838,7 @@ std::vector<std::vector<unsigned char>> ImageAugmentation(const unsigned char* d
 		for (int i = 0; i < 3 * x*y; i++) data2[i] = data[i];
 
 		img_rotation rot;
-		rot.rotation(&data2[0], x, y, (aug.rnd() < 0.5 ? 1.0 : -1.0)*(15.0 + aug.rnd()*10.0)*M_PI / 180.0);
+		rot.rotation(&data2[0], x, y, (aug.rnd() < 0.5 ? 1.0 : -1.0)*(10.0 + aug.rnd()*10.0)*M_PI / 180.0);
 
 		image_augmentat.push_back(data2);
 	}

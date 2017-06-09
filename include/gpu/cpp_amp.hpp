@@ -73,7 +73,7 @@ inline void gpuInfo(const char* acceleratorInfo)
 inline void copy_array(const double* v, const int size, std::vector<float>& va)
 {
 	va.resize(size);
-#if 0
+#if	10
 	for ( int i = 0; i < size; ++i )
 	{
 		va[i] = static_cast<float>(v[i]);

@@ -100,7 +100,7 @@ public:
 
 	void svdcmp(T **a, int m, int n, T *w, T **v)
 	{
-		//double pythag(double a, double b);
+		//T pythag(T a, T b);
 		int flag, i, its, j, jj, k, l, nm;
 		T anorm, c, f, g, h, s, scale, x, y, z, *rv1;
 

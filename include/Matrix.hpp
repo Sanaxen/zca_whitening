@@ -556,6 +556,7 @@ inline Matrix<double> zca_whitening_matrix(Matrix<T>& X, const T eps = 1.0e-5, b
 	}
 
 	std::vector<T> mu(X.m, 0.0);
+#pragma omp parallel for
 	for (int i = 0; i < X.m; i++)
 	{
 		mu[i] = sum[i] / X.n;
@@ -565,6 +566,7 @@ inline Matrix<double> zca_whitening_matrix(Matrix<T>& X, const T eps = 1.0e-5, b
 
 	//不偏共分散行列	Sigma = (X-mu) * (X-mu)' / N
 	Matrix<T> sigma = Matrix<T>::zeros(X.m, X.n);
+#pragma omp parallel for
 	for (int i = 0; i < X.m; i++)
 	{
 		for (int j = 0; j < X.n; j++)
@@ -622,6 +624,7 @@ inline Matrix<T> zca_whitening_matrix2(Matrix<T>& X, const double eps = 1.0e-5, 
 
 	//不偏共分散行列	Sigma = (X-mu) * (X-mu)' / N
 	Matrix<T> sigma = Matrix<T>::zeros(X.m, X.n);
+#pragma omp parallel for
 	for (int i = 0; i < X.m; i++)
 	{
 		for (int j = 0; j < X.n; j++)

@@ -21,7 +21,7 @@ inline T* zca_whitening_image(Image* img, const double eps = 1.0E-5)
 	//Matrix<T> ZCAIMG = zca_whitening_matrix<T>(IMG, eps)*IMG;
 	Matrix<T> ZCAIMG = zca_whitening_matrix2(IMG, eps)*IMG;
 
-	double* zcaimg = new T[3 * img->height*img->width];
+	T* zcaimg = new T[3 * img->height*img->width];
 #pragma omp parallel for
 	for (int i = 0; i < img->height; i++)
 	{

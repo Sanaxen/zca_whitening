@@ -100,7 +100,7 @@ int main(int argc, char** argv)
 		Image* img = readImage("aa.bmp");
 
 		//double* whitening_img = ImageTo<double>(img);
-		double* whitening_img = image_whitening(img);
+		double* whitening_img = image_whitening<double>(img);
 
 		zca_whitening_image(whitening_img, img->width, img->height, 0.01);
 
